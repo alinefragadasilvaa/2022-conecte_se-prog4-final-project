@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!-- LINKS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ------------------------------------------------>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Nosso CSS -->
+        <link rel="stylesheet" href="../style.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <!-- Font Awesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+        <!------------------------------------------------------------------------------------------------------->
+
+        <title>Conecte-se | Fóruns da Comunidade</title>
+
+    </head>
+    <body>
+
+         
+        
+        <section class="wrapper">
+
+            <!-- MENU LATERAL --------------------------------------------------------------------------------------->
+            
+            <nav id="sidebar">
+                <section id="botoesUsuario" style="padding: 10px 0 40px 0; text-align: center;">
+                    <img src="/logo.img.png" class="rounded mx-auto d-block" alt="..." style="width: 120px;"><br><h4><%= apelido =%></h4>
+                    <a href="/editarPerfil"><button type="button" class="btn botao-bgescuro-amarelo">Meu Perfil</button></a>
+                    <a href="/encerrarSession"><button type="button" class="btn botao-bgescuro-branco">Sair</button></a>
+                </section>
+
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        
+                        <a href="#">Início</a>
+                    </li>
+                    <li>
+                        <a href="#">Empresas</a>
+                    </li>
+                    <li>
+                        <a href="#">Comunidades</a>
+                    </li>
+                    <li>
+                        <a href="#">Fale Conosco</a>
+                    </li>
+                
+                </ul>
+
+            </nav>
+
+            <!------------------------------------------------------------------------------------------------------->
+
+            <!-- CONTEÚDO DA PÁGINA --------------------------------------------------------------------------------->
+            
+            <section id="content">
+                <nav class="navbar navbar-default">
+                    <section class="container-fluid">
+
+                        <section class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" style="display: block; background-color: #2a313b; color: #fafafa; ;">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                                <span>Abrir/Fechar Menu</span>
+                            </button>
+                        </section>
+                    </section>
+                </nav>
+
+                <section class="banner">
+                    <p class="p-claro" style="padding: 10px 15px;">Página de início (DESLOGADO)</p>
+                </section>
+            </section>
+
+            <!------------------------------------------------------------------------------------------------------->
+
+        </section>
+
+
+
+
+        <!-- SCRIPTS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ----------------------------------------------->
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+        <!-- Menu lateral JS -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
+        <!------------------------------------------------------------------------------------------------------->
+
+    </body>
+</html>
