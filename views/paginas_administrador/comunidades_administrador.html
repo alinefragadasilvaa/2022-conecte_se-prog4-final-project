@@ -132,25 +132,23 @@
             <section class="cards-empresas">
                 <form action="/#" method="post">
                     <ul class="list-group">
-                        <li class="list-group-item" style="background-color: #f0f0f0; color: black;">
+                        <li class="list-group-item" style="background-color: #f0f0f0; color: black; width: 30%;  min-width: 300px; margin-right: 2%; margin-top: 2%;">
                             <section style="display: flex;">
                                 <span class="badge badge-danger"
-                                    style="font-size: 15px; background-color: #2a313b; color: #f0b300; margin-right: 10px;">Finanças<!--<%= u.categoria %>--></span><br>
+                                    style="font-size: 15px; background-color: #2a313b; color: #f0b300; margin-right: 10px;" id="categoria" name="categoria">Finanças<!--<%= u.categoria %>--></span><br>
                             </section>
-                            <!--<h4 ><%= u.nome %> <%= u.sobrenome %></h4></h4>-->
-                            <!--<h4 >Apelido: <%= u.apelido %></h4>-->
-                            <h3>Comunidade dos doidos</h3>
-                            <h4 style="text-align:justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            <h3 id="nome" name="nome ">Nome da Comunidade</h3>
+                            <h4 style="text-align:justify;" id="descricao " name="descricao ">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Ducimus laboriosam commodi modi,
                                 cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto
                                 incidunt tenetur
                                 explicabo reiciendis sint ullam.cum quibusdam officia</h4>
-                            <h5 style="text-align: right;">Autor(a): alinefraga<!--<%= u.criador %>--></h5>
-                            <h5 style="text-align: right;">10/01/2023<!--<%= u.data_criacao %>--></h5>
+                            <h5 style="text-align: right;" id="criador" name="criador">Autor(a): alinefraga<!--<%= u.criador %>--></h5>
+                            <h5 style="text-align: right;" id="data_criacao" name="data_criacao">10/01/2023<!--<%= u.data_criacao %>--></h5>
                             <a href="/teste" style="display: flex; width: 140px; margin: auto;"><button
                                     class="btn botao-bgclaro-escuro">Ver Comunidade</button></a>
                         </li>
-                        <!--<% }) %>-->
+                        <!--<% }) %>--> 
                     </ul>
                 </form>
             </section>
