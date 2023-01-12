@@ -149,6 +149,71 @@ a[aria-expanded="true"]::before {
 
 /* CSS PRÓPRIO ------------------------------------------------------------------------ */
 
+#forum{
+    display: flex;
+    width: 100%;
+}
+
+#aligner-forum{
+    background-color: #f0f0f0;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid;
+    height: 225px;
+    width: 65%;
+    padding: 25px;
+    text-align: justify;
+}
+
+#container-info-forum{
+    background-color: #f0f0f0;
+    padding: 25px;
+    width: 35%;
+    border: 1px solid;
+    margin-left: 1%;
+    border-radius: 10px;
+}
+
+#container-assunto{
+    height: 90%;
+    padding: 10px;
+    overflow-y: scroll;
+    border-radius: 10px;
+    margin: auto;
+}
+
+#resposta-forum{
+    margin-top: 2%;
+    display: flex;
+    width: 100%;
+}
+
+#aligner-forum-resposta{
+    background-color: #f0f0f0;
+    margin: auto;
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid;
+    height: 225px;
+    width: 65%;
+    padding: 25px;
+    text-align: justify;
+}
+
+#container-mensagem{
+    height: 90%;
+    padding: 10px;
+    overflow-y: scroll;
+    margin: auto;
+}
+
+#container-info-mensagem{
+    background-color: #f0f0f0;
+    padding: 25px;
+    width: 35%;
+    border: 1px solid;
+    border-radius: 0px 10px 10px 0px;
+}
+
 
 .loginContainer{
     margin: 10% auto;

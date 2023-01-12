@@ -48,7 +48,7 @@
             </section>
 
             <ul class="list-unstyled components">
-                <li class="active">
+                <li>
 
                     <a href="#">Início</a>
                 </li>
@@ -61,7 +61,7 @@
                 <li>
                     <a href="#">Empresas</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="#">Comunidades</a>
                 </li>
                 <li>
@@ -91,13 +91,14 @@
             </nav>
             <h1 style="display: block;">Titulo <!--<%=f.titulo=%>--></h1>
             <section id="forum">
-                    <div id="aligner-forum">
-                        <div id="container-assunto"> <!--<%=f.assunto=%>-->
-                            <h4 style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi,
+                <div id="aligner-forum">
+                    <div id="container-assunto"> <!--<%=f.assunto=%>-->
+                        <h4 style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+                            laboriosam commodi modi,
                             cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto
                             incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. </h4>
-                        </div>
                     </div>
+                </div>
                 <section id="container-info-forum">
                     <h4 style="text-align: center;">Autor:
                         <!--<%= rf.autor %>-->
@@ -114,66 +115,89 @@
                 </section>
             </section>
             <form>
-                <button id="show-or-hide" class="btn botao-bgclaro-escuro" style="margin: 1% 0;" type="button">Responder</button>
+                <button id="show-or-hide" class="btn botao-bgclaro-escuro" style="margin: 1% 0;"
+                    type="button">Responder</button>
                 <section id="formularioResponderForum"
                     style=" display: none; width: 100%; background-color: #f0f0f0; height: 225px; margin-top: 2%; border-radius: 10px; border: 1px solid black;">
                     <form action="post">
                         <section id="inputController">
                             <div class="form-outline mb-4">
-                        <label class="form-label" for="nomeComunidade" style="margin: 2%;">Digite sua mensagem:</label><br>
-                        <textarea name="" id="" rows="4"
-                            style="width: 96%; margin-left: 2%; resize: none; border-radius: 5px;"></textarea>
-                        <button type="submit" class="btn botao-bgclaro-escuro"
-                            style="width: 10%; height: 35px; font-size: 16px; margin-left: 2%;">
-                            Enviar
-                        </button>
+                                <label class="form-label" for="nomeComunidade" style="margin: 2%;">Digite sua
+                                    mensagem:</label><br>
+                                <textarea name="" id="" rows="4"
+                                    style="width: 96%; margin-left: 2%; resize: none; border-radius: 5px;"></textarea>
+                                <button type="submit" class="btn botao-bgclaro-escuro"
+                                    style="width: 10%; height: 35px; font-size: 16px; margin-left: 2%;">
+                                    Enviar
+                                </button>
                     </form>
                 </section>
             </form>
         </section>
+        <h2>Respostas</h2>
+        <section id="forum">
+            <div id="aligner-forum-resposta">
+                <div id="container-mensagem"> <!--<%=f.assunto=%>-->
+                    <h4 style="font-size: 16px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus
+                        laboriosam commodi modi,
+                        cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto
+                        incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. </h4>
+                </div>
+            </div>
+            <section id="container-info-mensagem">
+                <h4 style="text-align: center;">Autor:
+                    <!--<%= rf.autor %>-->
+                    alinefraga
+                </h4>
+                <h4 style="text-align: center;">Data de criação:
+                    <!--<%= rf.data_criacao %>-->
+                    12/01/2023
+                </h4>
+                <h4 style="text-align: center;">Fórum:
+                    <!--<%= rf.forum %>-->
+                    Fórum sobre coisas
+                </h4>
+            </section>
 
+        </section>
         <!------------------------------------------------------------------------------------------------------->
 
-    </section>
 
+        <!-- SCRIPTS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ----------------------------------------------->
 
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+        <!-- Menu lateral JS -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
 
-
-    <!-- SCRIPTS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ----------------------------------------------->
-
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <!-- Bootstrap Js CDN -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- jQuery Custom Scroller CDN -->
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-    <!-- Menu lateral JS -->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#sidebar").mCustomScrollbar({
-                theme: "minimal"
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
             });
 
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar, #content').toggleClass('active');
-                $('.collapse.in').toggleClass('in');
-                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            var btn = document.querySelector('#show-or-hide');
+            var container = document.querySelector('#formularioResponderForum');
+
+            btn.addEventListener('click', function () {
+                if (container.style.display == 'block') {
+                    container.style.display = 'none';
+                } else {
+                    container.style.display = 'block';
+                }
             });
-        });
-
-        var btn = document.querySelector('#show-or-hide');
-        var container = document.querySelector('#formularioResponderForum');
-
-        btn.addEventListener('click', function () {
-            if (container.style.display == 'block') {
-                container.style.display = 'none';
-            } else {
-                container.style.display = 'block';
-            }
-        });
-    </script>
-    <!------------------------------------------------------------------------------------------------------->
+        </script>
+        <!------------------------------------------------------------------------------------------------------->
 
 </body>
 
