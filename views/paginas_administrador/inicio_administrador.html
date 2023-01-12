@@ -1,119 +1,169 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
-        <!-- LINKS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ------------------------------------------------>
 
-        <!-- Bootstrap CSS CDN -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- Nosso CSS -->
-        <link rel="stylesheet" href="../style.css">
-        <!-- Scrollbar Custom CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-        <!-- Font Awesome JS -->
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- LINKS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ------------------------------------------------>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+
+    <!------------------------------------------------------------------------------------------------------->
+
+    <title>Conecte-se | Início</title>
+
+</head>
+
+<body>
+
+
+
+    <section class="wrapper">
+
+        <!-- MENU LATERAL --------------------------------------------------------------------------------------->
+
+        <nav id="sidebar">
+            <section id="botoesUsuario" style="padding: 10px 0 40px 0; text-align: center;">
+                <img src="../imagens/logo.img.png" class="rounded mx-auto d-block" alt="..." style="width: 120px;"><br><h4><%= apelido =%></h4>
+                <a href="/editarPerfil"><button type="button" class="btn botao-bgescuro-amarelo">Meu Perfil</button></a>
+                <a href="/encerrarSession"><button type="button" class="btn botao-bgescuro-branco">Sair</button></a>
+            </section>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    
+                    <a href="#">Início</a>
+                </li>
+                <li>
+                    <a href="#">Tipo usuários</a>
+                </li>
+                <li>
+                    <a href="#">Usuários</a>
+                </li>
+                <li>
+                    <a href="#">Empresas</a>
+                </li>
+                <li>
+                    <a href="#">Comunidades</a>
+                </li>
+                <li>
+                    <a href="#">Fale Conosco</a>
+                </li>
+            </ul>
+
+        </nav>
 
         <!------------------------------------------------------------------------------------------------------->
 
-        <title>Conecte-se | Início</title>
+        <!-- CONTEÚDO DA PÁGINA --------------------------------------------------------------------------------->
 
-    </head>
-    <body>
+        <section id="content">
+            <nav class="navbar navbar-default">
+                <section class="container-fluid">
 
-         
-        
-        <section class="wrapper">
-
-            <!-- MENU LATERAL --------------------------------------------------------------------------------------->
-            
-            <nav id="sidebar">
-                <section id="botoesUsuario" style="padding: 10px 0 40px 0; text-align: center;">
-                    <img src="/logo.img.png" class="rounded mx-auto d-block" alt="..." style="width: 120px;"><br><h4><%= apelido =%></h4>
-                    <a href="/editarPerfil"><button type="button" class="btn botao-bgescuro-amarelo">Meu Perfil</button></a>
-                    <a href="/encerrarSession"><button type="button" class="btn botao-bgescuro-branco">Sair</button></a>
+                    <section class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"
+                            style="display: block; background-color: #2a313b; color: #fafafa; ;">
+                            <i class="glyphicon glyphicon-align-left"></i>
+                            <span>Abrir/Fechar Menu</span>
+                        </button>
+                    </section>
                 </section>
-
-                <ul class="list-unstyled components">
-                    <li class="active">
-                        
-                        <a href="#">Início</a>
-                    </li>
-                    <li>
-                        <a href="#">Tipo usuários</a>
-                    </li>
-                    <li>
-                        <a href="#">Usuários</a>
-                    </li>
-                    <li>
-                        <a href="#">Empresas</a>
-                    </li>
-                    <li>
-                        <a href="#">Comunidades</a>
-                    </li>
-                    <li>
-                        <a href="#">Fale Conosco</a>
-                    </li>
-
-                </ul>
-
             </nav>
 
-            <!------------------------------------------------------------------------------------------------------->
-
-            <!-- CONTEÚDO DA PÁGINA --------------------------------------------------------------------------------->
-            
-            <section id="content">
-                <nav class="navbar navbar-default">
-                    <section class="container-fluid">
-
-                        <section class="navbar-header">
-                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" style="display: block; background-color: #2a313b; color: #fafafa; ;">
-                                <i class="glyphicon glyphicon-align-left"></i>
-                                <span>Abrir/Fechar Menu</span>
-                            </button>
-                        </section>
-                    </section>
-                </nav>
-
-                <section class="banner">
-                    <p class="p-claro" style="padding: 10px 15px;">Página de início (DESLOGADO)</p>
-                </section>
+            <section class="banner">
+                <p class="p-claro" style="margin: 20px auto; font-size: 34px; font-weight: bold;">Boas vindas à
+                    Conecte-se!</p>
+                <button id="conviteCadastro">Cadastre sua empresa</button>
             </section>
 
-            <!------------------------------------------------------------------------------------------------------->
-
+            <div class="container-lg" style="margin-top: 3%; font-size: 1.6rem; text-align: center;">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quasi deserunt reiciendis, quo, nam quisquam recusandae dignissimos sequi corrupti libero iusto
+                    quam! Necessitatibus, facilis?
+                    Sequi maxime esse repellendus nihil eum at?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quasi deserunt reiciendis, quo, nam quisquam recusandae dignissimos sequi corrupti libero iusto
+                    quam! Necessitatibus, facilis?
+                    Sequi maxime esse repellendus nihil eum at?</p>
+            </div>
+            <div class="cardsVantagens" style="display: flex; flex-wrap: wrap;">
+                <div class="card" style="width: 120px;">
+                    <img src="../imagens/encontreProdutos.png" class="card-img-top" alt="..." style="width: 100%; height: 120px;">
+                    <div class="card-body">
+                        <p class="card-text" style="text-align: center;">Encontre produtos e serviços</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 120px;">
+                    <img src="../imagens/integreComunidades.png" class="card-img-top" alt="..."
+                        style="width: 100%; height: 120px;">
+                    <div class="card-body">
+                        <p class="card-text" style="text-align: center;">Integre comunidades</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 120px;">
+                    <img src="../imagens/interajaForuns.png" class="card-img-top" alt="..." style="width: 100%; height: 120px;">
+                    <div class="card-body">
+                        <p class="card-text" style="text-align: center;">Interaja em fóruns</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 120px;">
+                    <img src="../imagens/divulgueEmpresa.png" class="card-img-top" alt="..." style="width: 100%; height: 120px;">
+                    <div class="card-body">
+                        <p class="card-text" style="text-align: center;">Divulgue sua empresa</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
 
-
-
-        <!-- SCRIPTS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ----------------------------------------------->
-
-        <!-- jQuery CDN -->
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <!-- Bootstrap Js CDN -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <!-- jQuery Custom Scroller CDN -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-        <!-- Menu lateral JS -->
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $("#sidebar").mCustomScrollbar({
-                    theme: "minimal"
-                });
-
-                $('#sidebarCollapse').on('click', function () {
-                    $('#sidebar, #content').toggleClass('active');
-                    $('.collapse.in').toggleClass('in');
-                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-                });
-            });
-        </script>
         <!------------------------------------------------------------------------------------------------------->
 
-    </body>
+    </section>
+
+
+
+
+    <!-- SCRIPTS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ----------------------------------------------->
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Menu lateral JS -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+    <!------------------------------------------------------------------------------------------------------->
+
+</body>
+
 </html>
