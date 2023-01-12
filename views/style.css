@@ -151,7 +151,6 @@ a[aria-expanded="true"]::before {
 
 #forum{
     display: flex;
-    width: 100%;
 }
 
 #aligner-forum{
@@ -216,7 +215,7 @@ a[aria-expanded="true"]::before {
 
 
 .loginContainer{
-    margin: 10% auto;
+    margin: 6% auto;
 }
 
 .p-claro{
@@ -240,7 +239,7 @@ a[aria-expanded="true"]::before {
 }
 
 #conviteCadastro{
-    width: 25%;
+    width: 100%;
     height: 45px;
     margin: auto;
     display: block; 
@@ -281,6 +280,21 @@ a[aria-expanded="true"]::before {
     color: #f0b300;
     transition: all 0.3s;
     border: #f0b300 solid 1px;
+}
+
+.botao-bgescuro-escuro{
+    display: block; 
+    margin: 5px auto; 
+    width: 125px; 
+    background-color: #222221; 
+    color: #f0b300;
+}
+
+.botao-bgescuro-escuro:hover{
+    background-color: #f0b300;
+    color: #222221;
+    transition: all 0.3s;
+    border: #222221 solid 1px;
 }
 
 .botao-bgclaro-escuro{
