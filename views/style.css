@@ -126,6 +126,8 @@ a[aria-expanded="true"]::before {
     color: #f0b300;
 }
 
+
+
 /*OUTROS*/
 @media (max-width: 768px) {
     #sidebar {
@@ -325,6 +327,17 @@ a[aria-expanded="true"]::before {
     color: #fafafa;
     transition: all 0.3s;
     border: #fafafa solid 1px;
+}
+
+.botao-faleConosco-branco{
+   
+    text-align: left;
+    height: 40px;
+    display: block; 
+    margin: 5px auto; 
+    width: 100%; 
+    background-color: #2a313b; 
+    color: #f0f0f0;
 }
 
 .cardsVantagens{
