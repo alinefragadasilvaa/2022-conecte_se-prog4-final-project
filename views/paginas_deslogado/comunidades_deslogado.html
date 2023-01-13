@@ -85,53 +85,31 @@
                     style="background-color: #2a313b; color: #f0b300;">Buscar</button>
                 </div>
             </label>
-            <form>
-                <button id="show-or-hide" class="btn botao-bgescuro-escuro" style="margin: 1% 0; width: 150px;" type="button">Criar
-                    Comunidade</button>
-                <section id="formularioCriarComunidade"
-                    style=" display: none; width: 500px; background-color: #f0f0f0; height: 475px; margin-top: 2%; border-radius: 10px; border: 1px solid black;">
-                    <form action="post">
-                        <section id="inputController">
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="nome" style="margin: 2%;">Dê um nome para sua
-                                    comunidade</label><br>
-                                <input type="text" id="nome" name="nome" class="form-control"
-                                    style="width: 90%; margin-left: 2%;" />
-                            </div>       
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="data_criacao" style="margin: 2%;">Data de criação</label><br>
-                                <input type="date" id="data_criacao" name="data_criacao" class="form-control"
-                                    style="width: 90%; margin-left: 2%;" />
-                            </div>                     
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="categoria " style="margin: 2%;">Qual a categoria da sua
-                                    comunidade</label><br>
-                                <select name="categoria " id="categoria "
-                                    style="width: 90%; height: 35px; border-radius: 5px; margin-left: 2%;">
-                                    <option value="artesanato">Administração</option>
-                                    <option value="produtosOrganicos">Venda de Produtos Orgânicos </option>
-                                    <option value="manutencaoAparelhos">Manutenção de aparelhos</option>
-                                </select>                                                                
-                            </div>
-                            <div class="form-outline mb-4">
-                                <label class="form-label" for="estado " style="margin: 2%;">Estado</label><br>
-                                <select name="estado " id="estado "
-                                    style="width: 90%; height: 35px; border-radius: 5px; margin-left: 2%;">
-                                    <option value="ativada">Ativada</option>
-                                    <option value="desativada">Desativada</option>
-                                </select>                                                                
-                            </div>
-                        </section>
-                        <label class="form-label" for="descricao " style="margin: 2%;">Dê uma descrição para sua comunidade</label><br>
-                        <textarea name="descricao " id="descricao "rows="3" style="width: 90%; margin-left: 2%; resize: none; border-radius: 10px; padding: 5px;"></textarea>
-                        <button type="submit" class="btn botao-bgclaro-escuro"
-                            style="width: 35%; height: 35px; font-size: 16px; margin-left: 2%;">
-                            Finalizar
-                        </button>
+            <div style="display: flex;">     
+                <section class="cards-empresas" style="display: flex; flex-wrap: wrap;">
+                    <form action="/#" method="post" style="width: 30%; margin-right: 2%; min-width: 290px;" >
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <section style="display: flex;">
+                                    <span class="badge badge-danger"
+                                        style="font-size: 15px; background-color: #2a313b; color: #f0b300; margin-right: 10px;" id="categoria" name="categoria">Finanças</span><br>                                
+                                </section>
+                                <h3 id="nome" name="nome ">Nome da Comunidade</h3>
+                                <h4 style="text-align:justify;" id="descricao " name="descricao ">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Ducimus laboriosam commodi modi,
+                                    cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto
+                                    incidunt tenetur
+                                    explicabo reiciendis sint ullam.cum quibusdam officia</h4>
+                                <h5 style="text-align: right;" id="criador" name="criador">Autor(a): alinefraga</h5>
+                                <h5 style="text-align: right;" id="data_criacao" name="data_criacao">10/01/2023</h5>
+                                <a href="/teste" style="display: flex; width: 140px; margin: auto;"><button
+                                        class="btn botao-bgclaro-escuro">Ver Comunidade</button></a>
+                            </li>
+                            <!--<% }) %>--> 
+                        </ul>
                     </form>
                 </section>
-            </form>  
-
+                </div>   
         </section>
 
 
