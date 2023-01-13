@@ -39,14 +39,19 @@
 
         <nav id="sidebar">
             <section id="botoesUsuario" style="padding: 10px 0 40px 0; text-align: center;">
-                <img src="../imagens/logo.img.png" class="rounded mx-auto d-block" alt="..." style="width: 120px;"><br><h4><%= apelido =%></h4>
-                <a href="/editarPerfil" style="width: 60%; margin: auto; display:flex;"><button type="button" class="btn botao-bgescuro-amarelo">Meu Perfil</button></a>
-                <a href="/encerrarSession" style="width: 60%; margin: auto; display:flex;"><button type="button" class="btn botao-bgescuro-branco">Sair</button></a>
+                <img src="../imagens/logo.img.png" class="rounded mx-auto d-block" alt="..." style="width: 120px;"><br>
+                <h4>
+                    <%= apelido=%>
+                </h4>
+                <a href="/editarPerfil" style="width: 60%; margin: auto; display:flex;"><button type="button"
+                        class="btn botao-bgescuro-amarelo">Meu Perfil</button></a>
+                <a href="/encerrarSession" style="width: 60%; margin: auto; display:flex;"><button type="button"
+                        class="btn botao-bgescuro-branco">Sair</button></a>
             </section>
 
             <ul class="list-unstyled components">
                 <li>
-                    
+
                     <a href="#">Início</a>
                 </li>
                 <li>
@@ -93,12 +98,13 @@
                     <input type="text" class="form-control" placeholder="" aria-label=""
                         aria-describedby="button-addon2" style="width: 320px;">
                     <button class="btn btn-outline-secondary" type="button" id="button-addon2"
-                    style="background-color: #2a313b; color: #f0b300;">Buscar</button>
+                        style="background-color: #2a313b; color: #f0b300;">Buscar</button>
                 </div>
             </label>
-            <div ></div>
+            <div></div>
             <form>
-                <button id="show-or-hide" class="btn botao-bgescuro-escuro" style="margin: 1% 0; width: 150px;" type="button">Criar
+                <button id="show-or-hide" class="btn botao-bgescuro-escuro" style="margin: 1% 0; width: 150px;"
+                    type="button">Criar
                     Comunidade</button>
                 <section id="formularioCriarComunidade"
                     style=" display: none; width: 500px; background-color: #f0f0f0; height: 475px; margin-top: 2%; border-radius: 10px; border: 1px solid black;">
@@ -109,12 +115,13 @@
                                     comunidade</label><br>
                                 <input type="text" id="nome" name="nome" class="form-control"
                                     style="width: 90%; margin-left: 2%;" />
-                            </div>       
+                            </div>
                             <div class="form-outline mb-4">
-                                <label class="form-label" for="data_criacao" style="margin: 2%;">Data de criação</label><br>
+                                <label class="form-label" for="data_criacao" style="margin: 2%;">Data de
+                                    criação</label><br>
                                 <input type="date" id="data_criacao" name="data_criacao" class="form-control"
                                     style="width: 90%; margin-left: 2%;" />
-                            </div>                     
+                            </div>
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="categoria " style="margin: 2%;">Qual a categoria da sua
                                     comunidade</label><br>
@@ -123,7 +130,7 @@
                                     <option value="artesanato">Administração</option>
                                     <option value="produtosOrganicos">Venda de Produtos Orgânicos </option>
                                     <option value="manutencaoAparelhos">Manutenção de aparelhos</option>
-                                </select>                                                                
+                                </select>
                             </div>
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="estado " style="margin: 2%;">Estado</label><br>
@@ -131,88 +138,94 @@
                                     style="width: 90%; height: 35px; border-radius: 5px; margin-left: 2%;">
                                     <option value="ativada">Ativada</option>
                                     <option value="desativada">Desativada</option>
-                                </select>                                                                
+                                </select>
                             </div>
                         </section>
-                        <label class="form-label" for="descricao " style="margin: 2%;">Dê uma descrição para sua comunidade</label><br>
-                        <textarea name="descricao " id="descricao "rows="3" style="width: 90%; margin-left: 2%; resize: none; border-radius: 10px; padding: 5px;"></textarea>
+                        <label class="form-label" for="descricao " style="margin: 2%;">Dê uma descrição para sua
+                            comunidade</label><br>
+                        <textarea name="descricao " id="descricao " rows="3"
+                            style="width: 90%; margin-left: 2%; resize: none; border-radius: 10px; padding: 5px;"></textarea>
                         <button type="submit" class="btn botao-bgclaro-escuro"
                             style="width: 35%; height: 35px; font-size: 16px; margin-left: 2%;">
                             Finalizar
                         </button>
                     </form>
                 </section>
-            </form>    
-            <div style="display: flex;">     
-            <section class="cards-empresas" style="display: flex; flex-wrap: wrap;">
-                <form action="/#" method="post" style="width: 30%; margin-right: 2%; min-width: 290px;" >
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <section style="display: flex;">
-                                <span class="badge badge-danger"
-                                    style="font-size: 15px; background-color: #2a313b; color: #f0b300; margin-right: 10px;" id="categoria" name="categoria">Finanças</span><br>
-                                    <span class="badge badge-danger"
-                                    style="font-size: 15px; background-color: #2a313b; color: #f0b300; margin-right: 10px;" id="estado" name="estado">Estado</span><br>
-                            </section>
-                            <h3 id="nome" name="nome ">Nome da Comunidade</h3>
-                            <h4 style="text-align:justify;" id="descricao " name="descricao ">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Ducimus laboriosam commodi modi,
-                                cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto
-                                incidunt tenetur
-                                explicabo reiciendis sint ullam.cum quibusdam officia</h4>
-                            <h5 style="text-align: right;" id="criador" name="criador">Autor(a): alinefraga</h5>
-                            <h5 style="text-align: right;" id="data_criacao" name="data_criacao">10/01/2023</h5>
-                            <a href="/teste" style="display: flex; width: 140px; margin: auto;"><button
-                                    class="btn botao-bgclaro-escuro">Ver Comunidade</button></a>
-                        </li>
-                        <!--<% }) %>--> 
-                    </ul>
-                </form>
-            </section>
-            </div>   
-            </section>
             </form>
-
+            <div style="display: flex;">
+                <section class="cards-empresas" style="display: flex; flex-wrap: wrap;">
+                    <form action="/#" method="post" style="width: 30%; margin-right: 2%; min-width: 290px;">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <section style="display: flex;">
+                                    <span class="badge badge-danger"
+                                        style="font-size: 15px; background-color: #2a313b; color: #f0b300; margin-right: 10px;"
+                                        id="categoria" name="categoria">Finanças</span><br>
+                                    <span class="badge badge-danger"
+                                        style="font-size: 15px; background-color: #2a313b; color: #f0b300; margin-right: 10px;"
+                                        id="estado" name="estado">Estado</span><br>
+                                </section>
+                                <h3 id="nome" name="nome ">Nome da Comunidade</h3>
+                                <h4 style="text-align:justify;" id="descricao " name="descricao ">Lorem ipsum dolor sit
+                                    amet, consectetur adipisicing elit.
+                                    Ducimus laboriosam commodi modi,
+                                    cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae
+                                    architecto
+                                    incidunt tenetur
+                                    explicabo reiciendis sint ullam.cum quibusdam officia</h4>
+                                <h5 style="text-align: right;" id="criador" name="criador">Autor(a): alinefraga</h5>
+                                <h5 style="text-align: right;" id="data_criacao" name="data_criacao">10/01/2023</h5>
+                                <a href="/teste" style="display: flex; width: 140px; margin: auto;"><button
+                                        class="btn botao-bgclaro-escuro">Ver Comunidade</button></a>
+                            </li>
+                            <!--<% }) %>-->
+                        </ul>
+                    </form>
+                </section>
+            </div>
         </section>
+        </form>
+
+    </section>
 
 
 
 
-        <!-- SCRIPTS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ----------------------------------------------->
+    <!-- SCRIPTS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ----------------------------------------------->
 
-        <!-- jQuery CDN -->
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <!-- Bootstrap Js CDN -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <!-- jQuery Custom Scroller CDN -->
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-        <!-- Menu lateral JS -->
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $("#sidebar").mCustomScrollbar({
-                    theme: "minimal"
-                });
-
-                $('#sidebarCollapse').on('click', function () {
-                    $('#sidebar, #content').toggleClass('active');
-                    $('.collapse.in').toggleClass('in');
-                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-                });
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- Menu lateral JS -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
             });
 
-            var btn = document.querySelector('#show-or-hide');
-            var container = document.querySelector('#formularioCriarComunidade');
-
-            btn.addEventListener('click', function () {
-                if (container.style.display == 'block') {
-                    container.style.display = 'none';
-                } else {
-                    container.style.display = 'block';
-                }
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
             });
-        </script>
-        <!------------------------------------------------------------------------------------------------------->
+        });
+
+        var btn = document.querySelector('#show-or-hide');
+        var container = document.querySelector('#formularioCriarComunidade');
+
+        btn.addEventListener('click', function () {
+            if (container.style.display == 'block') {
+                container.style.display = 'none';
+            } else {
+                container.style.display = 'block';
+            }
+        });
+    </script>
+    <!------------------------------------------------------------------------------------------------------->
 
 </body>
 

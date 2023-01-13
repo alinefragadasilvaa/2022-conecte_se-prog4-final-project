@@ -43,8 +43,10 @@
                 <h4>
                     <%= apelido=%>
                 </h4>
-                <a href="/editarPerfil" style="width: 60%; margin: auto; display:flex;"><button type="button" class="btn botao-bgescuro-amarelo">Meu Perfil</button></a>
-                <a href="/encerrarSession" style="width: 60%; margin: auto; display:flex;"><button type="button" class="btn botao-bgescuro-branco">Sair</button></a>
+                <a href="/editarPerfil" style="width: 60%; margin: auto; display:flex;"><button type="button"
+                        class="btn botao-bgescuro-amarelo">Meu Perfil</button></a>
+                <a href="/encerrarSession" style="width: 60%; margin: auto; display:flex;"><button type="button"
+                        class="btn botao-bgescuro-branco">Sair</button></a>
             </section>
 
             <ul class="list-unstyled components">
@@ -107,19 +109,25 @@
                         style="background-color: #f0f0f0; color: black; width: 30%; margin: 1% 1% 1% 0px ;  min-width: 310px;">
                         <div style="display: flex; flex-direction:row-reverse">
                             <span class="badge badge-danger"
-                                style="font-size: 15px; background-color: #2a313b; color: #f0b300; margin-right: 10px;" id="estado" name="estado">Ativo<!--<%= u.estado %>--></span><br>
+                                style="font-size: 15px; background-color: #2a313b; color: #f0b300; margin-right: 10px;"
+                                id="estado" name="estado">Ativo<!--<%= u.estado %>--></span><br>
                             <span class="badge badge-danger"
-                                style="font-size: 15px; background-color: #2a313b; color: #f0b300; margin-right: 10px;" id="papel" name="estado">Administrador<!--<%= u.papel %>--></span><br>
+                                style="font-size: 15px; background-color: #2a313b; color: #f0b300; margin-right: 10px;"
+                                id="papel" name="estado">Administrador<!--<%= u.papel %>--></span><br>
                         </div>
                         <h3 id="nome" name="nome">Nome: Aline<!--<%= u.nome %>--><!--<%= u.sobrenome %>--></h3>
                         <h3 id="apelido" name="apelido">Apelido: alinefraga<!--<%= u.apelido %>--> </h3><br>
-                        <h5 style="text-align: right;" id="email" name="email">Email: brunobealnev@gmail.com<!--<%= u.email %>--></h5>
-                        <h5 style="text-align: right;" id="telefone" name="telefone">Telefone: 51982224212<!--<%= u.telefone %>--></h5>
+                        <h5 style="text-align: right;" id="email" name="email">Email:
+                            brunobealnev@gmail.com<!--<%= u.email %>--></h5>
+                        <h5 style="text-align: right;" id="telefone" name="telefone">Telefone:
+                            51982224212<!--<%= u.telefone %>--></h5>
                         <div style="display: flex; margin: auto;">
-                            <a href="/" style="margin: auto"><button id="editarUsuario" class="btn botao-bgescuro-escuro"  type="button">Editar</button></a>
-                            <a href="/" style="margin: auto"><button id="excluirUsuario" class="btn botao-bgescuro-escuro"  type="button">Excluir</button></a>
+                            <a href="/" style="margin: auto"><button id="editarUsuario"
+                                    class="btn botao-bgescuro-escuro" type="button">Editar</button></a>
+                            <a href="/" style="margin: auto"><button id="excluirUsuario"
+                                    class="btn botao-bgescuro-escuro" type="button">Excluir</button></a>
                     </li>
-                    <!--<% }) %>-->                    
+                    <!--<% }) %>-->
                 </ul>
             </form>
 

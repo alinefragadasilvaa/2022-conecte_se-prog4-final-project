@@ -1,91 +1,126 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
-        <!-- LINKS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ------------------------------------------------>
 
-        <!-- Bootstrap CSS CDN -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- Nosso CSS -->
-        <link rel="stylesheet" href="../style.css">
-        <!-- Scrollbar Custom CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-        <!-- Font Awesome JS -->
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- LINKS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ------------------------------------------------>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+
+    <!------------------------------------------------------------------------------------------------------->
+
+    <title>Conecte-se | Tipos de Usuário</title>
+
+</head>
+
+<body>
+
+
+
+    <section class="wrapper">
+
+        <!-- MENU LATERAL --------------------------------------------------------------------------------------->
+
+        <nav id="sidebar">
+            <section id="botoesUsuario" style="padding: 10px 0 40px 0; text-align: center;">
+                <img src="../imagens/logo.img.png" class="rounded mx-auto d-block" alt="..." style="width: 120px;"><br>
+                <h4>
+                    <%= apelido=%>
+                </h4>
+                <a href="/editarPerfil" style="width: 60%; margin: auto; display:flex;"><button type="button"
+                        class="btn botao-bgescuro-amarelo">Meu Perfil</button></a>
+                <a href="/encerrarSession" style="width: 60%; margin: auto; display:flex;"><button type="button"
+                        class="btn botao-bgescuro-branco">Sair</button></a>
+            </section>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+
+                    <a href="#">Início</a>
+                </li>
+                <li>
+                    <a href="#">Tipo usuários</a>
+                </li>
+                <li>
+                    <a href="#">Usuários</a>
+                </li>
+                <li>
+                    <a href="#">Empresas</a>
+                </li>
+                <li>
+                    <a href="#">Comunidades</a>
+                </li>
+                <li>
+                    <a href="#">Fale Conosco</a>
+                </li>
+
+            </ul>
+
+        </nav>
 
         <!------------------------------------------------------------------------------------------------------->
 
-        <title>Conecte-se | Tipos de Usuário</title>
+        <!-- CONTEÚDO DA PÁGINA --------------------------------------------------------------------------------->
 
-    </head>
-    <body>
+        <section id="content">
+            <h1 class="my-5 display-3 fw-bold ls-tight" style="line-height: 35px; font-size: 26px;">
+                Tipo de usuários<br />
+                <span class="text-primary" style="background-color: #2a313b;">da comunidade</span>
+            </h1>
+            <label for="">
+                <div class="input-group mb-3" style="display: flex;">
+                    <input type="text" class="form-control" placeholder="" aria-label=""
+                        aria-describedby="button-addon2" style="width: 320px;">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                        style="background-color: #2a313b; color: #f0b300;">Buscar</button>
+                </div>
+            </label>
+            <form method="post" style="display: flex;">
+                <a href="/" style="margin: 1% 1% 1% 0;"><button id="criarUsuario" class="btn botao-bgescuro-escuro"
+                        type="button">Criar</button></a>
+                <a href="/" style="margin: 1% 1% 1% 0;"><button id="editarUsuario" class="btn botao-bgescuro-escuro"
+                        type="button">Editar</button></a>
+                <a href="/" style="margin: 1% 1% 1% 0;"><button id="excluirUsuario" class="btn botao-bgescuro-escuro"
+                        type="button">Excluir</button></a>
+            </form>
+            <form action="/#" method="post">
+                <ul class="list-group" style="display: flex; flex-wrap: wrap;">
+                    <li class="list-group-item"
+                        style="background-color: #f0f0f0; color: black; width: 30%; margin: 1% 1% 1% 0px ;  min-width: 310px;">
+                        <div style="display: flex; flex-direction:row-reverse">
+                            <span class="badge badge-danger"
+                                style="font-size: 15px; background-color: #2a313b; color: #f0b300; margin-right: 10px;"
+                                id="estado" name="estado">Ativo<!--<%= u.estado %>--></span><br>
+                            <span class="badge badge-danger"
+                                style="font-size: 15px; background-color: #2a313b; color: #f0b300; margin-right: 10px;"
+                                id="papel" name="papel">Estudante<!--<%= u.papel %>--></span><br>
+                        </div>
 
-         
-        
-        <section class="wrapper">
-
-            <!-- MENU LATERAL --------------------------------------------------------------------------------------->
-            
-            <nav id="sidebar">
-                <section id="botoesUsuario" style="padding: 10px 0 40px 0; text-align: center;">
-                    <img src="/logo.img.png" class="rounded mx-auto d-block" alt="..." style="width: 120px;"><br><h4><%= apelido =%></h4>
-                    <a href="/editarPerfil" style="width: 60%; margin: auto; display:flex;"><button type="button" class="btn botao-bgescuro-amarelo">Meu Perfil</button></a>
-                    <a href="/encerrarSession" style="width: 60%; margin: auto; display:flex;"><button type="button" class="btn botao-bgescuro-branco">Sair</button></a>
-                </section>
-
-                <ul class="list-unstyled components">
-                    <li class="active">
-                        
-                        <a href="#">Início</a>
-                    </li>
-                    <li>
-                        <a href="#">Tipo usuários</a>
-                    </li>
-                    <li>
-                        <a href="#">Usuários</a>
-                    </li>
-                    <li>
-                        <a href="#">Empresas</a>
-                    </li>
-                    <li>
-                        <a href="#">Comunidades</a>
-                    </li>
-                    <li>
-                        <a href="#">Fale Conosco</a>
-                    </li>
-                
-                </ul>
-
-            </nav>
-
-            <!------------------------------------------------------------------------------------------------------->
-
-            <!-- CONTEÚDO DA PÁGINA --------------------------------------------------------------------------------->
-            
-            <section id="content">
-                <nav class="navbar navbar-default">
-                    <section class="container-fluid">
-
-                        <section class="navbar-header">
-                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" style="display: block; background-color: #2a313b; color: #fafafa; ;">
-                                <i class="glyphicon glyphicon-align-left"></i>
-                                <span>Abrir/Fechar Menu</span>
-                            </button>
-                        </section>
-                    </section>
-                </nav>
-
-                <section class="banner">
-                    <p class="p-claro" style="padding: 10px 15px;">Página de início (DESLOGADO)</p>
-                </section>
-            </section>
-
-            <!------------------------------------------------------------------------------------------------------->
-
+                        <div>
+                            <h3 id="nome" name="nome">Nome: Aline Fraga<!--<%= u.nome %>--><!--<%= u.sobrenome %>-->
+                            </h3>
+                            <h3 id="apelido" name="apelido">Apelido: alinefraga<!--<%= u.apelido %>--> </h3><br>
+                            <h5 style="text-align: right;" id="email" name="email">Email:
+                                brunobealnev@gmail.com<!--<%= u.email %>--></h5>
+                            <h5 style="text-align: right;" id="telefone" name="telefone">Telefone:
+                                51982224212<!--<%= u.telefone %>--></h5>
+                        </div>
         </section>
 
 
@@ -98,7 +133,8 @@
         <!-- Bootstrap Js CDN -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <!-- jQuery Custom Scroller CDN -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
         <!-- Menu lateral JS -->
         <script type="text/javascript">
             $(document).ready(function () {
@@ -115,5 +151,6 @@
         </script>
         <!------------------------------------------------------------------------------------------------------->
 
-    </body>
+</body>
+
 </html>
