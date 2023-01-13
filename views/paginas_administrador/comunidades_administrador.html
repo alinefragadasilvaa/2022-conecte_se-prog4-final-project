@@ -96,11 +96,12 @@
                     style="background-color: #2a313b; color: #f0b300;">Buscar</button>
                 </div>
             </label>
+            <div ></div>
             <form>
                 <button id="show-or-hide" class="btn botao-bgescuro-escuro" style="margin: 1% 0; width: 150px;" type="button">Criar
                     Comunidade</button>
                 <section id="formularioCriarComunidade"
-                    style=" display: none; width: 500px; background-color: #f0f0f0; height: 325px; margin-top: 2%; border-radius: 10px; border: 1px solid black;">
+                    style=" display: none; width: 500px; background-color: #f0f0f0; height: 475px; margin-top: 2%; border-radius: 10px; border: 1px solid black;">
                     <form action="post">
                         <section id="inputController">
                             <div class="form-outline mb-4">
@@ -108,7 +109,12 @@
                                     comunidade</label><br>
                                 <input type="text" id="nome" name="nome" class="form-control"
                                     style="width: 90%; margin-left: 2%;" />
-                            </div>
+                            </div>       
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="data_criacao" style="margin: 2%;">Data de criação</label><br>
+                                <input type="date" id="data_criacao" name="data_criacao" class="form-control"
+                                    style="width: 90%; margin-left: 2%;" />
+                            </div>                     
                             <div class="form-outline mb-4">
                                 <label class="form-label" for="categoria " style="margin: 2%;">Qual a categoria da sua
                                     comunidade</label><br>
@@ -117,7 +123,15 @@
                                     <option value="artesanato">Administração</option>
                                     <option value="produtosOrganicos">Venda de Produtos Orgânicos </option>
                                     <option value="manutencaoAparelhos">Manutenção de aparelhos</option>
-                                </select>
+                                </select>                                                                
+                            </div>
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="estado " style="margin: 2%;">Estado</label><br>
+                                <select name="estado " id="estado "
+                                    style="width: 90%; height: 35px; border-radius: 5px; margin-left: 2%;">
+                                    <option value="ativada">Ativada</option>
+                                    <option value="desativada">Desativada</option>
+                                </select>                                                                
                             </div>
                         </section>
                         <label class="form-label" for="descricao " style="margin: 2%;">Dê uma descrição para sua comunidade</label><br>
@@ -128,10 +142,11 @@
                         </button>
                     </form>
                 </section>
-            </form>            
+            </form>    
+            <div style="display: flex;">     
             <section class="cards-empresas">
-                <form action="/#" method="post">
-                    <ul class="list-group">
+                <form action="/#" method="post" style="display: flex;">
+                    <ul class="list-group" style="width: 30%;">
                         <li class="list-group-item" style="background-color: #f0f0f0; color: black; width: 30%;  min-width: 300px; margin-right: 2%; margin-top: 2%;">
                             <section style="display: flex;">
                                 <span class="badge badge-danger"
@@ -151,6 +166,9 @@
                         <!--<% }) %>--> 
                     </ul>
                 </form>
+                
+            </section>
+            </div>   
             </section>
             </form>
 
