@@ -100,8 +100,32 @@
                     style="background-color: #2a313b; color: #f0b300;">Buscar</button>
                 </div>
             </label>
+            <form>
+                <button id="show-or-hide" class="btn botao-bgescuro-escuro" style="margin: 1% 0; width: 150px;" type="button">Criar
+                    Fórum</button>
+    
+                <section id="formularioCriarForum"
+                    style=" display: none; width: 500px; background-color: #f0f0f0; height: 325px; margin-top: 2%; border-radius: 10px; border: 1px solid black;">
+                    <form action="post">
+                        <section id="inputController">
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="nome" style="margin: 2%;">Dê um titulo para seu
+                                    fórum</label><br>
+                                <input type="text" name="nome" id="nome" class="form-control"
+                                    style="width: 90%; margin-left: 2%;" />
+                            </div>
+                           
+                        </section>
+                        <label class="form-label" for="discussao" style="margin: 2%;"> Escreva a dicussão do seu fórum</label><br>
+                        <textarea name="discussao" id="discussao"rows="3" style="width: 90%; margin-left: 2%; resize: none; border-radius: 10px; padding: 5px;"></textarea>
+                        <button type="submit" class="btn botao-bgclaro-escuro"
+                            style="width: 35%; height: 35px; font-size: 16px; margin-left: 2%;">
+                            Finalizar
+                        </button>
+                    </form>
+                </section>
+            </form> 
             <form method="post" style="display: flex;">
-                <a href="/" style="margin: 1% 1% 1% 0;"><button id="criarForum" class="btn botao-bgescuro-escuro" type="button">Criar</button></a>
                 <a href="/" style="margin: 1% 1% 1% 0;"><button id="editarForum" class="btn botao-bgescuro-escuro"  type="button">Editar</button></a>
                 <a href="/" style="margin: 1% 1% 1% 0;"><button id="excluirForum" class="btn botao-bgescuro-escuro"  type="button">Excluir</button></a>
             </form>
@@ -148,7 +172,19 @@
                     $('.collapse.in').toggleClass('in');
                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
                 });
+            })
+
+            var btn = document.querySelector('#show-or-hide');
+            var container = document.querySelector('#formularioCriarForum');
+
+            btn.addEventListener('click', function () {
+                if (container.style.display == 'block') {
+                    container.style.display = 'none';
+                } else {
+                    container.style.display = 'block';
+                }
             });
+        </script>
         </script>
         <!------------------------------------------------------------------------------------------------------->
 
