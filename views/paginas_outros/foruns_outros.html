@@ -52,6 +52,12 @@
 
                     <a href="#">Início</a>
                 </li>
+                <li>
+                    <a href="#">Tipo usuários</a>
+                </li>
+                <li>
+                    <a href="#">Usuários</a>
+                </li>
                 <li class="active">
                     <a href="#">Empresas</a>
                 </li>
@@ -94,8 +100,32 @@
                     style="background-color: #2a313b; color: #f0b300;">Buscar</button>
                 </div>
             </label>
+            <form>
+                <button id="show-or-hide" class="btn botao-bgescuro-escuro" style="margin: 1% 0; width: 150px;" type="button">Criar
+                    Fórum</button>
+    
+                <section id="formularioCriarForum"
+                    style=" display: none; width: 500px; background-color: #f0f0f0; height: 325px; margin-top: 2%; border-radius: 10px; border: 1px solid black;">
+                    <form action="post">
+                        <section id="inputController">
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="nome" style="margin: 2%;">Dê um titulo para seu
+                                    fórum</label><br>
+                                <input type="text" name="nome" id="nome" class="form-control"
+                                    style="width: 90%; margin-left: 2%;" />
+                            </div>
+                           
+                        </section>
+                        <label class="form-label" for="discussao" style="margin: 2%;"> Escreva a dicussão do seu fórum</label><br>
+                        <textarea name="discussao" id="discussao"rows="3" style="width: 90%; margin-left: 2%; resize: none; border-radius: 10px; padding: 5px;"></textarea>
+                        <button type="submit" class="btn botao-bgclaro-escuro"
+                            style="width: 35%; height: 35px; font-size: 16px; margin-left: 2%;">
+                            Finalizar
+                        </button>
+                    </form>
+                </section>
+            </form> 
             <form method="post" style="display: flex;">
-                <a href="/" style="margin: 1% 1% 1% 0;"><button id="criarForum" class="btn botao-bgescuro-escuro" type="button">Criar</button></a>
                 <a href="/" style="margin: 1% 1% 1% 0;"><button id="editarForum" class="btn botao-bgescuro-escuro"  type="button">Editar</button></a>
                 <a href="/" style="margin: 1% 1% 1% 0;"><button id="excluirForum" class="btn botao-bgescuro-escuro"  type="button">Excluir</button></a>
             </form>
@@ -105,11 +135,11 @@
                         <li class="list-group-item" style="background-color: #f0f0f0; color: black; height: 430px; margin: auto; margin-top: 2%; width: 75%;">
                             <input type="radio" name="forum" id="forum" style="margin-left: 0px; display: flex;">
                             <!--<h4 ><%= f.titulo %>-->
-                            <h3 id="titulo" name="titulo">Fórum sobre coisas</h3>
-                            <h4 style="text-align:justify; font-size: 16x; overflow-y: scroll; height: 225px; padding: 30px;" id="assunto" name="assunto"></h4>><!--<%= f.assunto%>-->Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. </h4>
-                            <h5 style="text-align: right;" id="autor" name="autor">Autor(a): alinefraga<!--<%= f.autor %>--></h5>
-                            <h5 style="text-align: right;" id="data_criacao" name="data_criacao">10/01/2023<!--<%= f.data_criacao %>--></h5>
-                            <a href="/teste" style="display: flex; width: 140px; margin: auto;"><button
+                            <h3>Fórum sobre coisas</h3>
+                            <h4 style="text-align:justify; font-size: 16x; overflow-y: scroll; height: 225px; padding: 30px;"><!--<%= f.assunto%>-->Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus laboriosam commodi modi, cum quibusdam officia labore enim atque, asperiores sunt maiores eum beatae architecto incidunt tenetur explicabo reiciendis sint ullam.cum quibusdam officia. </h4>
+                            <h5 style="text-align: right;">Autor(a): alinefraga<!--<%= f.autor %>--></h5>
+                            <h5 style="text-align: right;">10/01/2023<!--<%= f.data_criacao %>--></h5>
+                            <a href="/" style="display: flex; width: 140px; margin: auto;"><button
                                     class="btn botao-bgclaro-escuro" style="width: 125px;">Ver mais</button></a>
                         </li>
                         <!--<% }) %>-->
@@ -142,7 +172,19 @@
                     $('.collapse.in').toggleClass('in');
                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
                 });
+            })
+
+            var btn = document.querySelector('#show-or-hide');
+            var container = document.querySelector('#formularioCriarForum');
+
+            btn.addEventListener('click', function () {
+                if (container.style.display == 'block') {
+                    container.style.display = 'none';
+                } else {
+                    container.style.display = 'block';
+                }
             });
+        </script>
         </script>
         <!------------------------------------------------------------------------------------------------------->
 
