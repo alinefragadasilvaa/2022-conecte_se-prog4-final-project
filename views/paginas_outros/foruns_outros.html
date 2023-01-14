@@ -101,7 +101,7 @@
                     Fórum</button>
                 <div style="display: flex;"></div>
                 <section id="formularioCriarForum"
-                    style=" display: none; width: 500px; background-color: #f0f0f0; height: 325px; margin-top: 2%; border-radius: 10px; border: 1px solid black;">
+                    style=" display: none; width: 500px; background-color: #f0f0f0; height: 425px; margin-top: 2%; border-radius: 10px; border: 1px solid black;">
                     <form action="post">
                         <section id="inputController">
                             <div class="form-outline mb-4">
@@ -115,7 +115,21 @@
                         <label class="form-label" for="discussao" style="margin: 2%;"> Escreva a dicussão do seu
                             fórum</label><br>
                         <textarea name="discussao" id="discussao" rows="3"
-                            style="width: 90%; margin-left: 2%; resize: none; border-radius: 10px; padding: 5px;"></textarea>
+                            style="width: 90%; margin-left: 2%; resize: none; border-radius: 10px; padding: 5px;"></textarea>                
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="estado " style="margin: 2%;">Estado</label><br>
+                            <select name="estado " id="estado "
+                                style="width: 90%; height: 35px; border-radius: 5px; margin-left: 2%;">
+                                <option value="ativada">Ativada</option>
+                                <option value="desativada">Desativada</option>
+                            </select>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="data_criacao" style="margin: 2%;">Data de
+                                criação</label><br>
+                            <input type="date" id="data_criacao" name="data_criacao" class="form-control"
+                                style="width: 90%; margin-left: 2%;" />
+                        </div>
                         <button type="submit" class="btn botao-bgclaro-escuro"
                             style="width: 35%; height: 35px; font-size: 16px; margin-left: 2%;">
                             Finalizar
