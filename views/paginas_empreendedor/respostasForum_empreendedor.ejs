@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!-- LINKS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ------------------------------------------------>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Nosso CSS -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <!-- Font Awesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+        <!------------------------------------------------------------------------------------------------------->
+
+        <title>Conecte-se | Empresas</title>
+
+    </head>
+    <body>
+
+         
+        
+
+            <!-- MENU LATERAL --------------------------------------------------------------------------------------->
+        
+
+            <!------------------------------------------------------------------------------------------------------->
+
+            <!-- CONTEÚDO DA PÁGINA --------------------------------------------------------------------------------->
+
+            <section id="content">
+                <nav class="navbar navbar-default">
+                    <section class="container-fluid">
+    
+                        <section class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"
+                                style="display: block; background-color: #2a313b; color: #fafafa; ;">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                                <span>Abrir/Fechar Menu</span>
+                            </button>
+                        </section>
+                    </section>
+                </nav>
+                <h1 style="display: block;"><%= forum[0].titulo %></h1>
+                <section id="forum">
+                    <div id="aligner-forum">
+                        <div id="container-assunto"> 
+                            <h4 style="font-size: 16px;"><%= forum[0].assunto %></h4>
+                        </div>
+                    </div>
+                    <section id="container-info-forum">
+                        <h4 style="text-align: center;">Autor:
+                            <%= forum[0].autor %>
+                        </h4>
+                        <h4 style="text-align: center;">Data de criação:
+                            <%= forum[0].data_criacao %>
+                        </h4>
+                    </section>
+                </section>
+                    <button id="show-or-hide" class="btn botao-bgclaro-escuro" style="margin: 1% 0;"
+                        type="button">Responder</button>
+                    <section id="formularioResponderForum"
+                        style=" display: none; width: 100%; background-color: #f0f0f0; height: 365px; margin-top: 2%; border-radius: 10px; border: 1px solid black;">
+                        <form action="/criarRespostaForum" method="post">
+                            <section id="inputController">
+                                <div class="form-outline mb-4">
+                                    <label class="form-label" for="mensagem " style="margin: 2%;">Digite sua
+                                        mensagem:</label><br>
+                                    <textarea name="mensagem" id="mensagem" rows="4"
+                                        style="width: 96%; margin-left: 2%; resize: none; border-radius: 5px;"></textarea>
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="data_criacao" style="margin: 2%;">Data de
+                                                criação</label><br>
+                                            <input type="date" id="data_criacao" name="criacao" class="form-control"
+                                                style="width: 90%; margin-left: 2%;" />
+                                        </div>
+                                        <br>
+                                        <select name="forum" id="forum"
+                                        style="width: 90%; height: 35px; border-radius: 5px; margin-left: 2%;">
+                                        <option value="">Selecionar Forum</option>
+                                        <% foruns.forEach((f, index) => { %>
+                                            <option value="<%= f.forum_id %>"><%= f.titulo %></option>
+                                            <% }) %>
+                                    </select>    
+                                        <button type="submit" class="btn botao-bgclaro-escuro"
+                                        style="width: 10%; height: 35px; font-size: 16px; margin-left: 2%;">
+                                        Enviar
+                                    </button>
+                        </form>
+                    </section>
+            </section>
+            <h2>Respostas</h2>
+            <% respostas.forEach((r, index) => { %>
+            <section id="forum">
+                <div id="aligner-forum-resposta">
+                    <div id="container-mensagem">
+                        <h4 style="font-size: 16px;"> <%= r.mensagem %></h4>
+                    </div>
+                </div>
+                <section id="container-info-mensagem">
+                    <h4 style="text-align: center;">Autor:
+                        <%= r.autor %>
+                    </h4>
+                    <h4 style="text-align: center;">Data de criação:
+                        <%= r.data_criacao %>
+                    </h4>
+                </section>
+               
+    
+            </section>
+            <% }) %>
+            <!------------------------------------------------------------------------------------------------------->
+    
+    
+            <!-- SCRIPTS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ----------------------------------------------->
+    
+            <!-- jQuery CDN -->
+            <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+            <!-- Bootstrap Js CDN -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <!-- jQuery Custom Scroller CDN -->
+            <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+            <!-- Menu lateral JS -->
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $("#sidebar").mCustomScrollbar({
+                        theme: "minimal"
+                    });
+    
+                    $('#sidebarCollapse').on('click', function () {
+                        $('#sidebar, #content').toggleClass('active');
+                        $('.collapse.in').toggleClass('in');
+                        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                    });
+                });
+    
+                var btn = document.querySelector('#show-or-hide');
+                var container = document.querySelector('#formularioResponderForum');
+    
+                btn.addEventListener('click', function () {
+                    if (container.style.display == 'block') {
+                        container.style.display = 'none';
+                    } else {
+                        container.style.display = 'block';
+                    }
+                });
+            </script>
+        <!------------------------------------------------------------------------------------------------------->
+
+    </body>
+</html>

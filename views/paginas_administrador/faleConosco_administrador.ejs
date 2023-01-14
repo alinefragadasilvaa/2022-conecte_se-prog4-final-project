@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!-- LINKS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ------------------------------------------------>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Nosso CSS -->
+        <link rel="stylesheet" href="style.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+        <!-- Font Awesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+        <!------------------------------------------------------------------------------------------------------->
+
+        <title>Conecte-se | Fale Conosco</title>
+
+    </head>
+    <body>
+
+         
+        
+        <section class="wrapper">
+
+            <!-- MENU LATERAL --------------------------------------------------------------------------------------->
+            
+            <nav id="sidebar">
+                <section id="botoesUsuario" style="padding: 10px 0 40px 0; text-align: center;">
+                    <img src="../imagens/logo.img.png" class="rounded mx-auto d-block" alt="..." style="width: 120px;"><br><h4><%= usuario %></h4>
+                    <a href="/editarPerfil"><button type="button" class="btn botao-bgescuro-amarelo">Meu Perfil</button></a>
+                    <a href="/encerrarSession"><button type="button" class="btn botao-bgescuro-branco">Sair</button></a>
+                </section>
+
+                <ul class="list-unstyled components">
+                    <li >
+                        
+                        <a href="/inicio-administrador">Início</a>
+                    </li>
+                    <li>
+                        <a href="tipos-usuario-administrador">Tipo usuários</a>
+                    </li>
+                    <li>
+                        <a href="/usuarios-administrador">Usuários</a>
+                    </li>
+                    <li>
+                        <a href="/empresas-administrador">Empresas</a>
+                    </li>
+                    <li>
+                        <a href="/comunidades-administrador">Comunidades</a>
+                    </li>
+                    <li class="active">
+                        <a href="/fale-conosco-administrador">Fale Conosco</a>
+                    </li>
+                  
+                </ul>
+
+            </nav>
+
+            <!------------------------------------------------------------------------------------------------------->
+
+            <!-- CONTEÚDO DA PÁGINA --------------------------------------------------------------------------------->
+            
+            <section id="content">
+                <nav class="navbar navbar-default">
+                    <section class="container-fluid">
+    
+                        <section class="navbar-header">
+                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"
+                                style="display: block; background-color: #2a313b; color: #fafafa; ;">
+                                <i class="glyphicon glyphicon-align-left"></i>
+                                <span>Abrir/Fechar Menu</span>
+                            </button>
+                        </section>
+                    </section>
+                </nav>
+    
+                <section class="banner">
+                    <p class="p-claro" style="padding: 10px 15px;">Página de início (DESLOGADO)</p>
+                </section>
+                <form>
+                    <button id="show-or-hide" class="botao-faleConosco-branco"
+                        style="margin: 1% 0; display: flex; align-items:center ;" type="button">
+                        <h4 style="margin-left: 3%; width: 50%;">Contatos</h4><img src="../imagens/seta.png"
+                            style="height: 50px; display: flex; margin-left: auto; rotate: 180deg; transition: 0.3s;" id="setaUp">
+    
+                    </button>
+                    <section id="perguntasFaleConosco"
+                        style=" display: none; width: 100%; background-color: #f0f0f0; height: 120px; margin-top: -1%; border-radius: 0px 0px 10px 10px; border: 1px solid black;">
+                        <form action="post">
+                            <section id="inputController">
+                                <div class="form-outline mb-4" style="padding: 20px;">
+                                    <h5>Email: conecte-se@contato.com</h5>
+                                </div>
+                        </form>
+                        
+                    </section>
+    
+                    <!------------------------------------------------------------------------------------------------------->
+    
+            </section>
+            <form>
+                <button id="show-or-hide1" class="botao-faleConosco-branco" style="margin: 1% 0; display: flex; align-items:center ;"
+                    type="button"><h4 style="margin-left: 3%; width: 50%;">Perguntas frequentes</h4><img src="../imagens/seta.png" style="height: 50px; display: flex; margin-left: auto; transition: 0.3s; rotate: 180deg;" id="setaUp1">
+                        
+                </button>
+                <section id="contatos"
+                    style=" display: none; width: 100%; background-color: #f0f0f0; margin-top: -1%; border-radius: 0px 0px 10px 10px; border: 1px solid black;">
+                    <form action="post">
+                        <section id="inputController">
+                            <div class="form-outline mb-4"  style="padding: 25px; text-align: justify;">
+                                <h4>Teste: <br><h5 style="width: 95%;
+                                    margin-left: 2%;">• Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum officia nostrum obcaecati quisquam praesentium. Sequi fugiat odit officiis atque unde, magnam quae facere hic ipsam nobis suscipit, at earum ex!</h6></h5><br>                            
+                                <h4>Teste: <br><h5 style="width: 95%;
+                                    margin-left: 2%;">• Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum officia nostrum obcaecati quisquam praesentium. Sequi fugiat odit officiis atque unde, magnam quae facere hic ipsam nobis suscipit, at earum ex!</h6></h5><br>     
+                                <h4>Teste: <br><h5 style="width: 95%;
+                                    margin-left: 2%;">• Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum officia nostrum obcaecati quisquam praesentium. Sequi fugiat odit officiis atque unde, magnam quae facere hic ipsam nobis suscipit, at earum ex!</h6></h5><br>                            
+                                <h4>Teste: <br><h5 style="width: 95%;
+                                    margin-left: 2%;">• Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum officia nostrum obcaecati quisquam praesentium. Sequi fugiat odit officiis atque unde, magnam quae facere hic ipsam nobis suscipit, at earum ex!</h6></h5><br>                                     
+                    </div>                            
+                    </form>
+    
+    
+        <!-- SCRIPTS DO BOOTSTRAP E DO MODELO DO MENU, NÃO ALTERAR! ----------------------------------------------->
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+        <!-- Menu lateral JS -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+                
+                var btn = document.querySelector('#show-or-hide');
+                var container = document.querySelector('#perguntasFaleConosco');
+                var setaUp = document.querySelector('#setaUp');
+                var btn1 = document.querySelector('#show-or-hide1');
+                var container1 = document.querySelector('#contatos');
+                var setaUp1 = document.querySelector('#setaUp1');
+
+                btn.addEventListener('click', function () {
+                    if (container.style.display == 'block') {
+                        container.style.display = 'none';
+                        setaUp.style.rotate = "180deg"
+
+                    } else {
+                        container.style.display = 'block';
+                        setaUp.style.rotate = "0deg"
+                    }
+                });
+
+                btn1.addEventListener('click', function () {
+                    if (container1.style.display == 'block') {
+                        container1.style.display = 'none';
+                        setaUp1.style.rotate = "180deg"
+
+                    } else {
+                        container1.style.display = 'block';
+                        setaUp1.style.rotate = "0deg"
+                    }
+                });
+            });
+            
+        </script>
+        <!------------------------------------------------------------------------------------------------------->
+    </body>
+</html>
