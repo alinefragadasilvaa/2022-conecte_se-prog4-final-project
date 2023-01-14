@@ -116,23 +116,29 @@
                     </h4>
                 </section>
             </section>
-                <button id="show-or-hide" class="btn botao-bgclaro-escuro" style="margin: 1% 0;"
-                    type="button">Responder</button>
-                <section id="formularioResponderForum"
-                    style=" display: none; width: 100%; background-color: #f0f0f0; height: 225px; margin-top: 2%; border-radius: 10px; border: 1px solid black;">
-                    <form action="post">
-                        <section id="inputController">
+            <button id="show-or-hide" class="btn botao-bgclaro-escuro" style="margin: 1% 0;"
+                type="button">Responder</button>
+            <section id="formularioResponderForum"
+                style=" display: none; width: 100%; background-color: #f0f0f0; height: 325px; margin-top: 2%; border-radius: 10px; border: 1px solid black;">
+                <form action="post">
+                    <section id="inputController">
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="mensagem " style="margin: 2%;">Digite sua
+                                mensagem:</label><br>
+                            <textarea name="mensagem " id="mensagem" rows="4"
+                                style="width: 96%; margin-left: 2%; resize: none; border-radius: 5px;"></textarea>
                             <div class="form-outline mb-4">
-                                <label class="form-label" for="mensagem " style="margin: 2%;">Digite sua
-                                    mensagem:</label><br>
-                                <textarea name="mensagem " id="mensagem" rows="4"
-                                    style="width: 96%; margin-left: 2%; resize: none; border-radius: 5px;"></textarea>
-                                <button type="submit" class="btn botao-bgclaro-escuro"
-                                    style="width: 10%; height: 35px; font-size: 16px; margin-left: 2%;">
-                                    Enviar
-                                </button>
-                    </form>
-                </section>
+                                <label class="form-label" for="data_criacao" style="margin: 2%;">Data de
+                                    criação</label><br>
+                                <input type="date" id="data_criacao" name="data_criacao" class="form-control"
+                                    style="width: 90%; margin-left: 2%;" />
+                            </div>
+                            <button type="submit" class="btn botao-bgclaro-escuro"
+                                style="width: 10%; height: 35px; font-size: 16px; margin-left: 2%;">
+                                Enviar
+                            </button>
+                </form>
+            </section>
         </section>
         <h2>Respostas</h2>
         <section id="forum">
